@@ -14,20 +14,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_logo.png" id="KZ5-xT-hQa">
-                                <rect key="frame" x="67" y="144" width="240" height="128"/>
+                                <rect key="frame" x="67" y="135" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tFt-Li-tzj">
-                                <rect key="frame" x="67" y="511" width="245" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="単語一覧">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Lu3-y3-4NV" kind="modal" id="tTT-ft-jdz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DNb-3Z-mlj">
                                 <rect key="frame" x="63" y="404" width="249" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,6 +27,17 @@
                                 </state>
                                 <connections>
                                     <action selector="startbuttonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEg-oU-aUT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tFt-Li-tzj">
+                                <rect key="frame" x="67" y="512" width="245" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="単語一覧">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Lu3-y3-4NV" kind="modal" id="tTT-ft-jdz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,6 +76,9 @@
                                 <state key="normal" title="答えを表示">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonPushed" destination="5Qs-NS-dTP" eventType="touchUpInside" id="zak-Xy-IZ3"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="word_blank.png" id="GKw-C7-dmm">
                                 <rect key="frame" x="9" y="104" width="240" height="128"/>
@@ -105,7 +108,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="answerLabel" destination="9fB-oI-724" id="UYb-8f-9fE"/>
-                        <outlet property="nextButton" destination="WNu-WD-IDL" id="nQy-6t-SAT"/>
+                        <outlet property="nextButton" destination="WNu-WD-IDL" id="xvC-80-XO0"/>
                         <outlet property="questionLabel" destination="WbK-YR-wMM" id="Jna-KT-428"/>
                         <segue destination="58U-wy-j1b" kind="modal" identifier="toFinishView" id="ZP5-3E-hqd"/>
                     </connections>
@@ -237,6 +240,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="englishTextField" destination="mM2-pc-Cey" id="yOC-Li-pi7"/>
+                        <outlet property="japaneseTextField" destination="eeu-nK-GNu" id="pqV-MB-O3d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJs-Zu-mOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
